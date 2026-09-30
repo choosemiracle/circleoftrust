@@ -7,7 +7,7 @@
       const link = document.createElement("a");
       link.className = "chapter-guided-link";
       link.href = "guided.html?chapter=" + index;
-      link.textContent = "开始本章引导练习 →";
+      link.textContent = "跟着页面练一遍 →";
       head.appendChild(link);
     }
   });
@@ -33,7 +33,7 @@
       const type = btn.dataset.choice;
       const messages = {
         fix: "这是一种典型的“急着替人解决问题”：也许出于好意，却太早把注意力从对方身上转到了我们的办法上。",
-        presence: "这更接近信任圈的陪伴：我愿意留下来听，但不替对方决定什么时候该行动、该往哪里走。",
+        presence: "这更接近信任圈的陪伴：我愿意留下来听，但不替对方决定什么时候行动、下一步往哪里走。",
         probe: "这个问题已经带着判断和结论，容易让对方防御起来。可以先把自己的猜测放下，真正问一问对方正在经历什么。"
       };
       feedback.textContent = messages[type];
@@ -88,7 +88,7 @@
   document.querySelectorAll("[data-q]").forEach(btn => btn.addEventListener("click", () => {
     const type = btn.dataset.q;
     qFeedback.textContent = type === "open"
-      ? "这更接近诚实而开放的问题：提问者自己并不知道答案，也给焦点成员留下了继续思考和感受的余地。"
+      ? "这更接近诚实而开放的问题：提问者自己并不知道答案，也给焦点成员留出了继续想、继续感受的余地。"
       : type === "leading"
       ? "这里把建议藏进了问题里。可以先去掉“应该”，再问对方此刻真正有什么感受和顾虑。"
       : "这个问题已经带着诊断和归因，提问者很容易变成替对方解释的人。先把自己的判断放下，再问对方此刻真正经历了什么。";

@@ -35,7 +35,7 @@
       const link = document.createElement("a");
       link.className = "guided-link";
       link.href = "guided.html?chapter=" + card.dataset.session;
-      link.textContent = "开始本章引导练习 →";
+      link.textContent = "跟着页面练一遍 →";
       card.querySelector(".session-content").appendChild(link);
     }
     const button = card.querySelector(".session-check");
@@ -63,8 +63,8 @@
   const readinessResult = document.getElementById("readinessResult");
   function renderReadiness() {
     const count = readinessBoxes.filter(x => x.checked).length;
-    let message = "先看看哪几项还不熟，挑一项继续练。";
-    if (count >= 3) message = "有几项已经比较熟，可以继续放进真实的二人或三人练习里检验。";
+    let message = "先看看哪几项还不熟，挑一项继续练就好。";
+    if (count >= 3) message = "有几项已经比较熟，可以放进真实的二人或三人练习里再试试。";
     if (count >= 5) message = "大部分准备项已经勾选；带领前仍要根据具体参与者和场地，再检查一次边界与安排。";
     if (count === 6) message = "六项都已勾选。开始前仍请重新确认保密、参与自由、退出方式和带领边界。";
     readinessResult.textContent = "当前：" + count + " / 6。" + message;
