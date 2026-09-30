@@ -1,0 +1,87 @@
+:root{
+  --g-deep:#24382f;
+  --g-sage:#99aa9c;
+  --g-paper:#f6f1e7;
+  --g-rust:#a66f50;
+  --g-line:#d8d2c6;
+}
+*{box-sizing:border-box}
+body.guided-page{margin:0;background:#f9f7f2;color:#24312b}
+.guided-topbar{background:#f4f0e7;border-bottom:1px solid var(--g-line)}
+.guided-nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0}
+.guided-links{display:flex;gap:20px}.guided-links a{color:inherit;text-decoration:none;font-size:14px}
+.guided-shell{min-height:100vh}
+.guided-intro{padding:78px 0 100px;background:linear-gradient(135deg,#dfe4db,#b6c2b5)}
+.guided-intro-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:55px;align-items:start}
+.guided-intro h1{font-family:"Songti SC","STSong",serif;font-size:clamp(50px,7vw,82px);line-height:1.1;letter-spacing:-.04em;margin:18px 0 24px}
+.guided-intro p{max-width:760px;font-size:18px;color:#34433b}
+.mode-card{background:rgba(255,255,255,.65);padding:26px}
+.mode-card>span{font-size:12px;letter-spacing:.12em;font-weight:700}
+.mode-switch{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:15px 0}
+.mode-switch button{border:1px solid #b8c1ba;background:transparent;padding:11px;cursor:pointer;font:inherit}
+.mode-switch button.active{background:var(--g-deep);color:white;border-color:var(--g-deep)}
+.mode-card p{font-size:14px;margin:0;color:#59665e}
+.chapter-picker{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:48px}
+.chapter-choice{border:1px solid rgba(36,49,43,.18);background:rgba(255,255,255,.62);padding:20px;text-align:left;cursor:pointer;min-height:145px;transition:.2s}
+.chapter-choice:hover{transform:translateY(-2px);background:#fff}
+.chapter-choice span{display:block;color:var(--g-rust);font-size:12px;font-weight:700}
+.chapter-choice b{display:block;font-family:"Songti SC",serif;font-size:22px;line-height:1.35;margin:10px 0 7px}
+.chapter-choice small{color:#66736b}
+.chapter-choice.done{outline:2px solid #76927f}
+.hidden{display:none!important}
+
+.guided-session{padding:55px 0 90px}
+.session-top{display:flex;justify-content:space-between;gap:30px;align-items:end}
+.session-kicker{font-size:12px;letter-spacing:.15em;color:var(--g-rust);font-weight:700}
+.session-top h2{font-family:"Songti SC",serif;font-size:clamp(34px,4.6vw,58px);line-height:1.2;margin:8px 0 0}
+.exit-session{border:1px solid var(--g-line);background:white;padding:10px 14px;cursor:pointer}
+.session-progress{margin:28px 0 24px}.session-progress-text{display:flex;justify-content:space-between;font-size:13px}
+.session-progress-track{height:6px;background:#e5e0d7;margin-top:10px}.session-progress-track i{display:block;height:100%;width:0;background:var(--g-deep);transition:width .25s ease}
+.practice-stage{display:grid;grid-template-columns:250px 1fr;gap:18px}
+.practice-rail{border:1px solid var(--g-line);background:white;padding:12px}
+.rail-step{padding:12px;border-bottom:1px solid #eee9df;font-size:13px;color:#778179}
+.rail-step:last-child{border-bottom:0}.rail-step.active{background:var(--g-paper);color:var(--g-deep);font-weight:700}.rail-step.done{color:#4f6f5a}
+.practice-main{background:white;border:1px solid var(--g-line);padding:36px;min-height:560px}
+.practice-type{font-size:11px;letter-spacing:.16em;color:var(--g-rust);font-weight:700}
+.practice-main h3{font-family:"Songti SC",serif;font-size:34px;line-height:1.35;margin:10px 0 14px}
+.practice-instruction{font-size:17px;line-height:1.8;color:#566159;max-width:850px}
+.practice-body{margin-top:24px}
+.practice-body .prompt-card{background:var(--g-paper);border-left:4px solid var(--g-rust);padding:20px;font-size:19px;line-height:1.7}
+.practice-body ul{padding-left:20px}.practice-body li{margin:10px 0;color:#5f6962}
+.touchstone-mini{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.touchstone-mini div{border:1px solid var(--g-line);padding:14px;background:#fffdf8}
+.touchstone-mini b{display:block;margin-bottom:4px}
+.partner-box{background:#eef2ed;border:1px solid #d4ded6;padding:18px}
+.partner-box b{display:block;margin-bottom:8px}
+.timer-panel{margin-top:25px;background:var(--g-deep);color:white;padding:24px;display:flex;justify-content:space-between;align-items:center;gap:20px}
+.timer-time{font-size:54px;font-variant-numeric:tabular-nums}
+.timer-controls{display:flex;gap:8px;flex-wrap:wrap}.timer-controls button{border:1px solid rgba(255,255,255,.3);background:transparent;color:white;padding:9px 12px;cursor:pointer}
+.guided-journal{display:block;margin-top:22px}.guided-journal>span{display:block;font-weight:700;margin-bottom:8px}
+.guided-journal textarea,.complete-card textarea{width:100%;min-height:150px;border:1px solid var(--g-line);padding:14px;font:inherit;background:#fffdf8;resize:vertical}
+.guided-journal small{display:block;margin-top:6px;color:#7c857f}
+.practice-actions{display:flex;justify-content:space-between;gap:10px;margin-top:28px}
+.btn.secondary{background:white;color:var(--g-deep);border:1px solid var(--g-line)}
+
+.guided-complete{padding:85px 0;background:var(--g-deep);min-height:76vh}
+.complete-card{max-width:820px;color:white}
+.complete-card h2{font-family:"Songti SC",serif;font-size:clamp(42px,6vw,70px);line-height:1.2;margin:15px 0}
+.complete-card p{color:#d7e0da;font-size:18px}
+.complete-card textarea{margin:22px 0;background:#1d3028;color:white;border-color:rgba(255,255,255,.22)}
+.complete-actions{display:flex;gap:10px;flex-wrap:wrap}
+.complete-actions .secondary{background:transparent;color:white;border-color:rgba(255,255,255,.3)}
+
+@media(max-width:900px){
+  .chapter-picker{grid-template-columns:repeat(2,1fr)}
+  .practice-stage{grid-template-columns:1fr}
+  .practice-rail{display:grid;grid-template-columns:repeat(4,1fr);gap:2px}
+  .rail-step{border:0;padding:8px}
+}
+@media(max-width:700px){
+  .guided-intro-grid{grid-template-columns:1fr}
+  .chapter-picker{grid-template-columns:1fr}
+  .practice-main{padding:24px;min-height:auto}
+  .practice-rail{grid-template-columns:repeat(2,1fr)}
+  .touchstone-mini{grid-template-columns:1fr}
+  .timer-panel{display:block}.timer-controls{margin-top:12px}
+  .session-top{display:block}.exit-session{margin-top:15px}
+}

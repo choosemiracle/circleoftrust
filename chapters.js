@@ -1,6 +1,17 @@
 (() => {
   const keyPrefix = "circleoftrust-chapters-v1-";
 
+  document.querySelectorAll(".chapter-section").forEach((section,index) => {
+    const head = section.querySelector(".chapter-head > div:last-child");
+    if (head && !head.querySelector(".chapter-guided-link")) {
+      const link = document.createElement("a");
+      link.className = "chapter-guided-link";
+      link.href = "guided.html?chapter=" + index;
+      link.textContent = "开始本章 Guided Practice →";
+      head.appendChild(link);
+    }
+  });
+
   document.querySelectorAll(".journal, .journal-input").forEach(el => {
     const key = keyPrefix + el.dataset.key;
     try { const saved = localStorage.getItem(key); if (saved !== null) el.value = saved; } catch (_) {}

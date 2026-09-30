@@ -13,6 +13,8 @@
 .chapter-no{font-size:46px;font-weight:300;color:var(--rust);line-height:1}.chapter-head small{display:block;color:var(--muted);font-size:11px;margin-top:8px}
 .chapter-head h2{font-family:"Songti SC",serif;font-size:clamp(34px,4vw,52px);line-height:1.18;margin:0 0 14px}
 .chapter-head p{max-width:900px;color:var(--muted);font-size:17px}
+.chapter-guided-link{display:inline-block;margin-top:10px;color:var(--deep);font-weight:700;text-decoration:none;font-size:13px}
+.chapter-guided-link:hover{text-decoration:underline}
 .chapter-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:28px}
 .chapter-card{border:1px solid var(--line);background:#fff;padding:25px}.chapter-card.warning{background:#f2eadf}
 .chapter-card h3{font-family:"Songti SC",serif;font-size:23px;margin:0 0 10px}

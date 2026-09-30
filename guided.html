@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Guided Practice｜《A Hidden Wholeness》</title>
+  <meta name="description" content="基于《A Hidden Wholeness》的逐章引导练习：静默、书写、二人/三人练习与 Closing Circle。" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="guided.css" />
+</head>
+<body class="guided-page">
+  <header class="guided-topbar">
+    <div class="wrap guided-nav">
+      <a class="brand" href="index.html">信任圈入门</a>
+      <div class="guided-links">
+        <a href="study.html">学习路线</a>
+        <a href="chapters.html">章节深读</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="guided-shell">
+    <section class="guided-intro" id="guidedIntro">
+      <div class="wrap guided-intro-grid">
+        <div>
+          <div class="eyebrow">GUIDED PRACTICE · 25–45 MIN</div>
+          <h1>选择一章，<br>让网页陪你走完一次练习。</h1>
+          <p>每次练习沿着固定结构前进：抵达 → Touchstone → 章节镜头 → 静默与书写 → 实践 → 整合 → Closing Circle。你可以一个人完成，也可以与一位同伴一起。</p>
+        </div>
+        <aside class="mode-card">
+          <span>练习模式</span>
+          <div class="mode-switch" role="group" aria-label="选择练习模式">
+            <button type="button" class="active" data-mode="solo">个人模式</button>
+            <button type="button" data-mode="partner">同伴模式</button>
+          </div>
+          <p id="modeNote">适合独处、日常练习或为小组做准备。</p>
+        </aside>
+      </div>
+
+      <div class="wrap chapter-picker" id="chapterPicker"></div>
+    </section>
+
+    <section class="guided-session hidden" id="guidedSession">
+      <div class="wrap">
+        <div class="session-top">
+          <div>
+            <div class="session-kicker" id="sessionKicker">CHAPTER</div>
+            <h2 id="sessionTitle"></h2>
+          </div>
+          <button class="exit-session" id="exitSession" type="button">返回章节选择</button>
+        </div>
+
+        <div class="session-progress">
+          <div class="session-progress-text"><span id="phaseCount">1 / 7</span><b id="phaseName">抵达</b></div>
+          <div class="session-progress-track"><i id="phaseProgress"></i></div>
+        </div>
+
+        <div class="practice-stage">
+          <aside class="practice-rail" id="practiceRail"></aside>
+
+          <article class="practice-main">
+            <div class="practice-type" id="practiceType">ARRIVE</div>
+            <h3 id="practiceTitle"></h3>
+            <p class="practice-instruction" id="practiceInstruction"></p>
+
+            <div class="practice-body" id="practiceBody"></div>
+
+            <div class="timer-panel hidden" id="timerPanel">
+              <div class="timer-time" id="timerTime">01:00</div>
+              <div class="timer-controls">
+                <button type="button" id="timerStart">开始</button>
+                <button type="button" id="timerPause">暂停</button>
+                <button type="button" id="timerReset">重置</button>
+              </div>
+            </div>
+
+            <label class="guided-journal hidden" id="journalWrap">
+              <span id="journalLabel">写下此刻最真实的几句话</span>
+              <textarea id="journalArea" placeholder="不用写完整，也不用写得漂亮。"></textarea>
+              <small>自动保存在当前浏览器。</small>
+            </label>
+
+            <div class="practice-actions">
+              <button class="btn secondary" type="button" id="prevPhase">上一步</button>
+              <button class="btn primary" type="button" id="nextPhase">继续</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="guided-complete hidden" id="guidedComplete">
+      <div class="wrap complete-card">
+        <div class="eyebrow">CLOSING CIRCLE</div>
+        <h2>这一次，不需要总结成答案。</h2>
+        <p id="completePrompt">只带走一句此刻愿意记住的话。</p>
+        <textarea id="closingNote" placeholder="我想带走……"></textarea>
+        <div class="complete-actions">
+          <button class="btn primary" type="button" id="saveComplete">完成本章练习</button>
+          <a class="btn secondary" href="chapters.html">回到章节深读</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="guided.js"></script>
+</body>
+</html>

@@ -52,6 +52,8 @@
 .session-columns p{font-size:14px;line-height:1.65;margin:7px 0 0;color:var(--muted)}
 .session-check{border:1px solid var(--line);background:white;padding:8px 13px;cursor:pointer;font:inherit;font-size:13px;min-width:64px}
 .session-card.done .session-check{background:var(--deep);color:white;border-color:var(--deep)}
+.guided-link{display:inline-block;margin-top:18px;color:var(--deep);font-weight:700;text-decoration:none;font-size:13px}
+.guided-link:hover{text-decoration:underline}
 
 .practice-ladder-section{background:var(--study-night);color:white}
 .practice-ladder-section h2{color:white}

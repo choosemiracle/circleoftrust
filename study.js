@@ -31,6 +31,13 @@
   }
 
   cards.forEach(card => {
+    if (!card.querySelector(".guided-link")) {
+      const link = document.createElement("a");
+      link.className = "guided-link";
+      link.href = "guided.html?chapter=" + card.dataset.session;
+      link.textContent = "进入本章引导练习 →";
+      card.querySelector(".session-content").appendChild(link);
+    }
     const button = card.querySelector(".session-check");
     button.addEventListener("click", () => {
       const id = Number(card.dataset.session);
