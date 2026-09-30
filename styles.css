@@ -107,6 +107,10 @@ footer{padding:26px 0;background:var(--ink);color:#cdd5d0;font-size:13px}
 .module-card h3{font-family:"Songti SC",serif;font-size:28px;margin:9px 0}
 .module-card p{color:var(--muted);margin-bottom:24px}
 .module-card b{font-size:13px}
+.study-feature-card{grid-column:1/-1;background:var(--deep);color:white;border-color:var(--deep)}
+.study-feature-card small,.study-feature-card p{color:#d8e2dc}
+.study-feature-card span{color:#e0c2a4}
+.study-feature-card b{color:white}
 
 .subhero{background:linear-gradient(135deg,#d8ded2,#a9b7a9);min-height:58vh}
 .subhero-copy{padding:8vh 0 10vh}
