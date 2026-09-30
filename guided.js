@@ -24,7 +24,7 @@
       closing:"这周，我愿意让哪一个行动更靠近真实一点？"
     },
     {
-      id:2, code:"CHAPTER II", title:"Soul 与 Role：我是什么时候开始扮演的？", duration:"35 分钟",
+      id:2, code:"CHAPTER II", title:"内在生命与外在角色：我是什么时候开始扮演的？", duration:"35 分钟",
       lens:"童年的秘密生活常保留着真实自我的线索；成年后的角色可以帮助我们活在世界上，也可能慢慢成为盔甲。",
       journal:"8–12 岁时，我不用别人要求也会主动做什么？在哪里、怎样玩、和谁在一起时，我最自在？",
       solo:"分两栏写“别人眼中的我”与“我里面的我”，圈出一处最消耗你的落差。",
@@ -32,8 +32,8 @@
       closing:"今天，我重新认出了自己身上的哪一条旧线索？"
     },
     {
-      id:3, code:"CHAPTER III", title:"True Self：辨认 Inner Teacher", duration:"35–40 分钟",
-      lens:"Inner Teacher 不是每一个冲动，而是那个持续把我们带回真实、关系与生命力的辨认中心。",
+      id:3, code:"CHAPTER III", title:"真实自我：辨识内在导师", duration:"35–40 分钟",
+      lens:"“内在导师”（Inner Teacher）不是每一个冲动，而是那个持续把我们带回真实、关系与生命力的辨识中心。",
       journal:"什么事情做完后让我更有生命力？什么事情反复让我缩小、麻木或扮演？",
       solo:"列出三条别人从小到大反复看见你身上的品质，再写：什么条件滋养它们，什么条件让它们缩回去？",
       partner:"互相只分享“我长期看见你身上的一个品质”，接收者不解释、不自谦，只记录。",
@@ -48,11 +48,11 @@
       closing:"下一次想给建议时，我愿意先做什么？"
     },
     {
-      id:5, code:"CHAPTER V", title:"创造容器：安全感来自结构", duration:"35–40 分钟",
+      id:5, code:"CHAPTER V", title:"创建承载结构：安全感来自结构", duration:"35–40 分钟",
       lens:"一个信任圈的安全，不是靠“大家人很好”，而是靠清晰边界、熟练带领、开放邀请、共同中心与有分寸的氛围。",
       journal:"回忆一个真正让你感到安全的小组。安全来自哪些具体结构，而不是哪些人格印象？",
-      solo:"为一个 90 分钟小组写出：人数、开始结束、保密、退出、第三物、沉默与 Closing Circle。",
-      partner:"两人互相审阅彼此的“容器设计”，只问：哪里还会让参与者猜测、被迫或失去边界？",
+      solo:"为一个 90 分钟小组写出：人数、开始结束、保密、退出、第三物、沉默与收束分享。",
+      partner:"两人互相审阅彼此的“承载结构设计”，只问：哪里还会让参与者猜测、被迫或失去边界？",
       closing:"如果我要带一个圈，我最需要先补哪一个结构能力？"
     },
     {
@@ -72,11 +72,11 @@
       closing:"我今天说出的哪句话，比一个观点更接近真实经验？"
     },
     {
-      id:8, code:"CHAPTER VIII", title:"Living the Questions：把答案还给焦点人物", duration:"40–45 分钟",
-      lens:"Honest & Open Questions 的核心是放下“我知道什么对你最好”的假设。清明委员会之前，先反复练习问题质量。",
+      id:8, code:"CHAPTER VIII", title:"活在问题中：把答案还给焦点成员", duration:"40–45 分钟",
+      lens:"“诚实而开放的问题”（Honest & Open Questions）的核心是放下“我知道什么对你最好”的假设。进入澄明小组之前，先反复练习问题质量。",
       journal:"写下一个你最近很想问别人的问题。里面有没有已经预设的答案、诊断或建议？",
       solo:"把三个“你为什么不……”改写成你自己也不知道答案的问题。",
-      partner:"用一个真实但低风险的议题练习 12 分钟：焦点人物说 3 分钟，另一人只提开放问题；焦点人物可以不回答。",
+      partner:"用一个真实但低风险的议题练习 12 分钟：焦点成员说 3 分钟，另一人只提开放问题；焦点成员可以不回答。",
       closing:"今天，我学会放下哪一种“替别人知道”的冲动？"
     },
     {
@@ -92,12 +92,12 @@
       lens:"第三条路不是折中，而是在现实与可能性之间承受张力；既不犬儒退开，也不靠强迫让世界立刻符合我们的理想。",
       journal:"我现在正站在哪一道“现实如此 / 我仍相信可能更好”的裂隙里？两端分别是什么？",
       solo:"写下一个最小但真实的行动：它既不否认现实，也不背叛你仍愿守住的价值。",
-      partner:"每人 8 分钟讲一个 tragic gap；听者不鼓励乐观、不强化悲观，只问开放问题。",
+      partner:"每人 8 分钟讲一个“现实与可能之间的张力”；听者不鼓励乐观、不强化悲观，只问开放问题。",
       closing:"我愿意怎样在这道裂隙里多站一会，而不是立刻逃走？"
     }
   ];
 
-  const phaseNames = ["抵达","Touchstone","章节镜头","静默与书写","实践","整合","Closing Circle"];
+  const phaseNames = ["抵达","基石提醒","章节镜头","静默与书写","实践","整合","收束分享"];
   let mode = "solo";
   let chapter = null;
   let phase = 0;
@@ -212,7 +212,7 @@
     } else if(phase===1){
       type.textContent="TOUCHSTONE";
       title.textContent="先守住边界，再进入深度";
-      instruction.textContent="今天不需要记住全部 Touchstones。只读下面四条，并选择一条作为这次练习的提醒。";
+      instruction.textContent="今天不需要记住全部 11 条基石。只读下面四条，并选择一条作为这次练习的提醒。";
       body.innerHTML='<div class="touchstone-mini">'+commonTouchstones.map(x=>`<div><b>•</b>${x}</div>`).join("")+'</div>';
     } else if(phase===2){
       type.textContent="CHAPTER LENS";
@@ -253,7 +253,7 @@
     }
 
     document.getElementById("prevPhase").disabled = phase===0;
-    document.getElementById("nextPhase").textContent = phase===phaseNames.length-1 ? "进入 Closing Circle" : "继续";
+    document.getElementById("nextPhase").textContent = phase===phaseNames.length-1 ? "进入收束分享" : "继续";
   }
 
   document.getElementById("journalArea").addEventListener("input",()=>{

@@ -146,6 +146,19 @@ footer{padding:26px 0;background:var(--ink);color:#cdd5d0;font-size:13px}
 .session-plan strong{display:block;font-size:18px;margin-bottom:8px}
 .session-plan p{margin:0;color:var(--muted)}
 
+/* Terminology guide */
+.term-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.term-grid.compact{grid-template-columns:repeat(3,1fr)}
+.term-card{background:white;border:1px solid var(--line);padding:24px}
+.term-card>span{display:block;font-size:11px;letter-spacing:.12em;color:var(--rust);font-weight:700;margin-bottom:8px}
+.term-card h3{font-family:"Songti SC",serif;font-size:27px;line-height:1.35;margin:0 0 10px}
+.term-card p{margin:0;color:var(--muted);line-height:1.75}
+.term-list{display:grid;gap:10px}
+.term-list article{display:grid;grid-template-columns:220px 1fr;gap:24px;align-items:start;background:white;border:1px solid var(--line);padding:20px 22px}
+.term-list b{display:block;font-family:"Songti SC",serif;font-size:24px}
+.term-list small{display:block;color:var(--rust);margin-top:4px}
+.term-list p{margin:0;color:var(--muted);line-height:1.75}
+
 /* Interactive Circle */
 .circle-lab{background:#2f443a;color:white}
 .circle-lab h2{color:white}
@@ -218,7 +231,8 @@ footer{padding:26px 0;background:var(--ink);color:#cdd5d0;font-size:13px}
   .nav-links{display:none}
   .hero{min-height:auto}
   .hero-inner{padding:60px 0 90px}
-  .intro-grid,.practice-grid,.cards.three,.resource-grid,.module-grid,.touchstone-grid,.circle-experience,.lab-grid{grid-template-columns:1fr}
+  .intro-grid,.practice-grid,.cards.three,.resource-grid,.module-grid,.touchstone-grid,.circle-experience,.lab-grid,.term-grid,.term-grid.compact{grid-template-columns:1fr}
+  .term-list article{grid-template-columns:1fr;gap:8px}
   .circle-experience{gap:28px}
   .orbit-detail{padding:26px}
   .trust-orbit svg{max-width:520px}

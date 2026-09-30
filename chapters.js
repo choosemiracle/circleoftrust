@@ -7,7 +7,7 @@
       const link = document.createElement("a");
       link.className = "chapter-guided-link";
       link.href = "guided.html?chapter=" + index;
-      link.textContent = "开始本章 Guided Practice →";
+      link.textContent = "开始本章引导练习 →";
       head.appendChild(link);
     }
   });
@@ -45,7 +45,7 @@
   if (containerScore) {
     const update = () => {
       const n = containerChecks.filter(x => x.checked).length;
-      containerScore.textContent = n + " / " + containerChecks.length + (n < 6 ? " · 先补结构，再谈深度" : " · 容器已有基础");
+      containerScore.textContent = n + " / " + containerChecks.length + (n < 6 ? " · 先补结构，再谈深度" : " · 承载结构已有基础");
     };
     containerChecks.forEach(x => x.addEventListener("change", update)); update();
   }
@@ -88,9 +88,9 @@
   document.querySelectorAll("[data-q]").forEach(btn => btn.addEventListener("click", () => {
     const type = btn.dataset.q;
     qFeedback.textContent = type === "open"
-      ? "更接近开放而诚实的问题：提问者并不知道答案，而且问题把注意力送回焦点人物的经验。"
+      ? "更接近开放而诚实的问题：提问者并不知道答案，而且问题把注意力送回焦点成员的经验。"
       : type === "leading"
-      ? "这里把建议藏进了问题里。可以去掉“应该”，再问焦点人物真正正在经历什么。"
+      ? "这里把建议藏进了问题里。可以去掉“应该”，再问焦点成员真正正在经历什么。"
       : "这个问题带有诊断和模式判断，容易让提问者变成解释者。先放下判断，再靠近具体经验。";
   }));
 
