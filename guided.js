@@ -33,11 +33,11 @@
     },
     {
       id:3, code:"第 3 章", title:"探寻真实自我：怎样听见内在导师", duration:"35–40 分钟",
-      lens:"“内在导师”不是脑子里冒出的每一个冲动，而是那些反复提醒我们：什么对自己真正重要、什么会让自己更像自己的内在线索。它需要时间，也需要在现实中慢慢验证。",
+      lens:"“内在导师”不是脑子里冒出的每一个冲动。它指的是：经过时间、关系和现实的检验，我们慢慢听清什么对自己真正重要、什么值得忠于。",
       journal:"做什么时，我最有精神、最像自己？哪些事情做完后，我常常变得麻木、疲惫，或需要继续扮演？",
       solo:"写下三种别人从小到大反复在你身上看见的品质，再写：在什么情况下它们更容易出现？又在什么情况下会被你收起来？",
       partner:"互相只分享“我长期看见你身上的一个品质”，接收者不解释、不自谦，只记录。",
-      closing:"今天，我愿意更认真留意自己身上的哪一个长期线索？"
+      closing:"今天，我愿意更认真留意自己身上哪一个反复出现的特点？"
     },
     {
       id:4, code:"第 4 章", title:"相伴而不相扰：既不侵入，也不离开", duration:"30–35 分钟",
@@ -72,7 +72,7 @@
       closing:"我今天说出的哪句话，最贴近自己的真实经历和感受？"
     },
     {
-      id:8, code:"第 8 章", title:"活在问题里：用提问把答案还给对方", duration:"40–45 分钟",
+      id:8, code:"第 8 章", title:"活在问题里：问问题，但不替对方回答", duration:"40–45 分钟",
       lens:"诚实而开放的问题，核心是放下“我知道什么对你最好”的假设。进入澄明小组之前，先练习怎样问一个自己也不知道答案的问题。",
       journal:"写下一个你最近很想问别人的问题。里面有没有已经预设的答案、诊断或建议？",
       solo:"把三个“你为什么不……”改写成你自己也不知道答案的问题。",
@@ -80,7 +80,7 @@
       closing:"今天，我最需要放下哪一种“替别人下结论”的冲动？"
     },
     {
-      id:9, code:"第 9 章", title:"笑声与静默：让空间重新有呼吸", duration:"30–35 分钟",
+      id:9, code:"第 9 章", title:"笑声与静默：深度不等于一直沉重", duration:"30–35 分钟",
       lens:"安静不一定表示彼此靠近，笑声也不一定表示轻松。我们要分辨：什么时候它们让人更自在、更真实，什么时候又成了逃避、掩饰或伤害。",
       journal:"一安静下来，我的身体和情绪会有什么反应？我通常会不会马上说话、开玩笑或转移话题？",
       solo:"写十分钟“我：…… / 沉默：……”的对话。不需要把沉默写成一个会给你答案的“智者”。",
@@ -93,7 +93,7 @@
       journal:"我现在面对的哪件事，正卡在“现实就是这样”和“我仍希望它可以更好”之间？",
       solo:"写下一个很小、但真实可做的行动：它既不假装现实不存在，也不放弃你仍然看重的东西。",
       partner:"每人 8 分钟讲一件“现实不理想，但我仍不愿放弃希望”的事；听者不急着鼓励，也不把问题说得更糟，只问开放问题。",
-      closing:"面对这件事，我愿意怎样多待一会儿、看清一点，而不是马上逃开或下结论？"
+      closing:"面对这件事，我愿意先看清哪一步，而不是马上逃开或下结论？"
     }
   ];
 
@@ -132,7 +132,7 @@
       mode = btn.dataset.mode;
       document.getElementById("modeNote").textContent = mode === "solo"
         ? "适合独处、日常练习或为小组做准备。"
-        : "适合两人一起练习；系统会在需要时给出轮次与聆听方式。";
+        : "适合两人一起练习；到需要交换角色时，页面会提示轮次和聆听方式。";
     });
   });
 
@@ -206,7 +206,7 @@
     if(phase===0){
       type.textContent="安顿";
       title.textContent="先让自己安静下来";
-      instruction.textContent="坐稳，脚落地。暂时不用理解本章，也不用让自己进入什么特殊状态。只留意脚底、身体和呼吸此刻是什么感觉。";
+      instruction.textContent="坐稳，脚落地。暂时不用理解本章，也不用刻意放空。只留意脚底、身体和呼吸此刻是什么感觉。";
       body.innerHTML='<div class="prompt-card">把这一段时间当成“邀请”，不是任务。你可以随时停下，也可以跳过任何不适合自己的练习。</div>';
       timerPanel.classList.remove("hidden"); setTimer(60);
     } else if(phase===1){
@@ -229,7 +229,7 @@
       try{ journal.value=localStorage.getItem(noteKey())||""; }catch(_){}
     } else if(phase===4){
       type.textContent=mode==="solo"?"个人练习":"同伴练习";
-      title.textContent=mode==="solo"?"把这一章落实成一个小行动":"和同伴一起练";
+      title.textContent=mode==="solo"?"今天先试一件小事":"和同伴一起练";
       instruction.textContent=mode==="solo"?chapter.solo:chapter.partner;
       body.innerHTML=mode==="solo"
         ? '<div class="partner-box"><b>提醒</b>不用想着一次就做对或做完。选一件足够小、今天就能试一试的事。</div>'
@@ -253,7 +253,7 @@
     }
 
     document.getElementById("prevPhase").disabled = phase===0;
-    document.getElementById("nextPhase").textContent = phase===phaseNames.length-1 ? "进入最后一步" : "继续";
+    document.getElementById("nextPhase").textContent = phase===phaseNames.length-1 ? "到收尾" : "继续";
   }
 
   document.getElementById("journalArea").addEventListener("input",()=>{

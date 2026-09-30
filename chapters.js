@@ -45,15 +45,15 @@
   if (containerScore) {
     const update = () => {
       const n = containerChecks.filter(x => x.checked).length;
-      containerScore.textContent = n + " / " + containerChecks.length + (n < 6 ? " · 先把基本条件补齐，再谈深入" : " · 基本条件已经比较齐全");
+      containerScore.textContent = n + " / " + containerChecks.length + (n < containerChecks.length ? " · 还有 " + (containerChecks.length - n) + " 项没有确认" : " · 8 项都已确认，开始前再逐项核对一次");
     };
     containerChecks.forEach(x => x.addEventListener("change", update)); update();
   }
 
   const thirdThingPrompts = [
     "先不要解释它。只问：哪一个细节最先让我停了下来？",
-    "如果把这个第三物当成一面镜子，它让我看见了自己的什么？",
-    "哪一部分让我想多看一会儿？哪一部分让我下意识想躲开？",
+    "看着这个第三物时，我最先想起了自己生活里的什么？",
+    "哪一部分我想多看一会儿？哪一部分我有点想避开？",
     "把注意力放在一个词 / 一个声音 / 一个画面上，安静两分钟。",
     "先别问“它到底是什么意思”，只问：“它让我想起了生活里的什么？”",
     "如果今天只带走一个问题，而不是一个答案，我会带走什么？"
@@ -109,7 +109,7 @@
       remaining -= 1; render();
       if (remaining <= 0) {
         clearInterval(silenceInterval); silenceInterval = null;
-        silenceDisplay.textContent = "可以慢慢回来";
+        silenceDisplay.textContent = "时间到了，可以继续往下写";
       }
     }, 1000);
   }));

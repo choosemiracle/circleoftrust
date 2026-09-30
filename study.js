@@ -63,10 +63,10 @@
   const readinessResult = document.getElementById("readinessResult");
   function renderReadiness() {
     const count = readinessBoxes.filter(x => x.checked).length;
-    let message = "先从自己最不熟练的一项开始练。";
-    if (count >= 3) message = "已经有了一些基础；下一步可以把这些能力放进真实的二人或三人练习。";
-    if (count >= 5) message = "已经接近可以尝试带领小型入门圈，但仍建议先从不太私密、压力较小的话题开始。";
-    if (count === 6) message = "六项都已经有基础。可以尝试完整流程，同时继续保持谦逊、边界感，并在每次结束后回看和反思。";
+    let message = "先看看哪几项还不熟，挑一项继续练。";
+    if (count >= 3) message = "有几项已经比较熟，可以继续放进真实的二人或三人练习里检验。";
+    if (count >= 5) message = "大部分准备项已经勾选；带领前仍要根据具体参与者和场地，再检查一次边界与安排。";
+    if (count === 6) message = "六项都已勾选。开始前仍请重新确认保密、参与自由、退出方式和带领边界。";
     readinessResult.textContent = "当前：" + count + " / 6。" + message;
   }
   readinessBoxes.forEach(box => box.addEventListener("change", renderReadiness));
