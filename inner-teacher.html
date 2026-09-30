@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>内在导师 Inner Teacher｜信任圈入门</title>
+  <meta name="description" content="认识 Parker Palmer 信任圈中的 Inner Teacher，并练习自我聆听。" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="inner-page">
+  <header class="subhero">
+    <nav class="nav wrap">
+      <a class="brand" href="index.html">信任圈入门</a>
+      <div class="nav-links">
+        <a href="touchstones.html">Touchstones</a>
+        <a href="questions.html">开放问题</a>
+        <a href="third-thing.html">第三物</a>
+        <a href="inner-teacher.html">内在导师</a>
+        <a href="facilitator.html">带领者</a>
+      </div>
+    </nav>
+    <div class="wrap subhero-copy">
+      <div class="eyebrow">MODULE 04 · INNER TEACHER</div>
+      <h1>别人可以陪你，<br>但不能替你知道。</h1>
+      <p>“内在导师”不是神秘能力，而是一种基本信任：在足够安全、安静的条件下，人有可能更接近自己真正的价值、界限与方向。</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="section wrap">
+      <div class="section-kicker">一个重要区别</div>
+      <h2>内在声音，不等于每一个念头</h2>
+      <div class="cards three">
+        <article class="card"><div class="num">01</div><h3>不是冲动</h3><p>它不一定最大声，也不一定最急迫。很多时候，它反而需要时间才听得见。</p></article>
+        <article class="card"><div class="num">02</div><h3>不是外界期待的回声</h3><p>“应该”“必须”“别人会怎么看”常常很响，但并不自动代表你的核心价值。</p></article>
+        <article class="card"><div class="num">03</div><h3>需要辨认</h3><p>信任内在导师，并不是“想到什么就做什么”，而是不断检视什么让自己更完整、更诚实。</p></article>
+      </div>
+    </section>
+
+    <section class="section practice">
+      <div class="wrap practice-grid">
+        <div>
+          <div class="section-kicker light">五分钟聆听</div>
+          <h2>不问“我该怎么办？”</h2>
+          <p>先换成一个更慢的问题：<strong>“这件事里，我已经知道、却还没有承认的是什么？”</strong></p>
+        </div>
+        <div class="practice-box">
+          <div class="question">这件事里，我已经知道、却还没有承认的是什么？</div>
+          <button class="btn light-btn" id="innerTimerBtn">开始 5 分钟</button>
+          <div class="timer" id="innerTimer">05:00</div>
+          <textarea id="innerNote" placeholder="不追求写得完整。把最先浮现的词句留下来……"></textarea>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wrap">
+      <div class="section-kicker">辨认之后</div>
+      <h2>再用三个问题慢慢核对</h2>
+      <div class="agreements">
+        <div><span>01</span><p><strong>它让我更完整吗？</strong> 还是让我越来越分裂、越来越需要扮演？</p></div>
+        <div><span>02</span><p><strong>它经得起时间吗？</strong> 一天之后、一周之后，这个声音还在吗？</p></div>
+        <div><span>03</span><p><strong>它尊重现实吗？</strong> 内在诚实不等于忽略责任、关系与后果。</p></div>
+      </div>
+    </section>
+  </main>
+  <script>
+    let innerTimerInterval;
+    const innerTimer = document.getElementById("innerTimer");
+    document.getElementById("innerTimerBtn").addEventListener("click", () => {
+      clearInterval(innerTimerInterval);
+      let seconds = 300;
+      innerTimer.textContent = "05:00";
+      innerTimerInterval = setInterval(() => {
+        seconds--;
+        const m = String(Math.floor(seconds/60)).padStart(2,"0");
+        const s = String(seconds%60).padStart(2,"0");
+        innerTimer.textContent = m + ":" + s;
+        if (seconds <= 0) {
+          clearInterval(innerTimerInterval);
+          innerTimer.textContent = "完成";
+          document.getElementById("innerNote").focus();
+        }
+      },1000);
+    });
+  </script>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <div>信任圈入门 · 中文学习实验站</div>
+      <div><a href="index.html">返回首页</a></div>
+    </div>
+  </footer>
+</body>
+</html>
