@@ -145,6 +145,9 @@ footer{padding:26px 0;background:var(--ink);color:#cdd5d0;font-size:13px}
 .session-plan span{display:block;font-size:12px;color:var(--rust);font-weight:700;margin-bottom:15px}
 .session-plan strong{display:block;font-size:18px;margin-bottom:8px}
 .session-plan p{margin:0;color:var(--muted)}
+.en-note{opacity:.58;font-weight:500;letter-spacing:.06em;margin-left:.35em}
+.original-title{display:block;margin-top:5px;color:var(--muted);font-size:11px;font-weight:500;letter-spacing:.02em;line-height:1.45}
+h2 .original-title,h3 .original-title{font-family:inherit}
 
 /* Terminology guide */
 .term-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}

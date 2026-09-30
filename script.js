@@ -8,7 +8,7 @@ const lessons = [
   {
     label:"第二步",
     title:"体验一分钟静默",
-    body:"静默不是空白，而是让内在较微弱的声音有机会被听见。不要追求放空，只要注意此刻身体、呼吸和情绪正在发生什么。",
+    body:"静默不是空白，只是暂时把外面的声音放低一点，让平时容易被盖住的感受、念头和身体反应有机会浮现。不要追求“脑子一片空白”，只需留意此刻正在发生什么。",
     prompt:"当外界安静下来时，你最先注意到的是身体、情绪，还是脑中的念头？"
   },
   {
@@ -19,14 +19,14 @@ const lessons = [
   },
   {
     label:"第四步",
-    title:"让另一个人完整地说五分钟",
-    body:"真正的聆听需要克制自己插话、共鸣、讲自己的故事。五分钟里，只做一件事：陪对方待在他自己的经验中。",
+    title:"给另一个人完整的五分钟",
+    body:"真正的聆听，需要忍住插话、接话和马上讲自己故事的冲动。五分钟里，只做一件事：让对方把自己的话说完，而你一直在这里。",
     prompt:"当你不能插话时，你会不会感到焦虑？你最想做什么？"
   },
   {
     label:"第五步",
-    title:"把技巧变成一种关系品质",
-    body:"信任圈真正改变人的地方，不在某一次练习，而在于你开始把不评判、允许沉默、相信内在导师的态度带进日常关系。",
+    title:"让练习慢慢变成日常相处的方式",
+    body:"信任圈真正的变化，不只发生在一次练习里，而是当你开始把少一点评判、多一点静默和对他人内在判断力的信任，带进日常关系。",
     prompt:"你的生活里，有哪一段关系最值得先尝试这种新的聆听方式？"
   }
 ];
@@ -170,7 +170,7 @@ const quizItems = [
     source:"“你有没有想过为自己活一次？”",
     options:["你是不是一直太在意别人？","如果暂时不用回应任何人的期待，你会听见什么？","你最想摆脱谁的影响？"],
     correct:1,
-    note:"它没有把“为自己活”的定义塞给对方，而是邀请对方自己辨认。"
+    note:"它没有替对方规定“为自己活”应该是什么，而是把空间留给对方自己去感受和分辨。"
   }
 ];
 let quizIndex = 0;
@@ -215,9 +215,9 @@ if(document.getElementById("nextQuiz")){
 // Third Thing draw
 const thirdThings = [
   {symbol:"✦",type:"诗歌",prompt:"找一句让你停顿的诗。不要解释作者，只说：它在我身上唤起了什么？"},
-  {symbol:"◫",type:"图像",prompt:"看一幅画或一张照片一分钟。哪一个细节最先把你留下来？"},
+  {symbol:"◫",type:"图像",prompt:"看一幅画或一张照片一分钟。哪一个细节最先让你停了下来？"},
   {symbol:"⌁",type:"自然物",prompt:"选一片叶子、石头或一杯水。它此刻像你生命中的什么？"},
-  {symbol:"▶",type:"电影片段",prompt:"看一个不超过三分钟的片段。哪一个人物动作或沉默让你有回应？"},
+  {symbol:"▶",type:"电影片段",prompt:"看一个不超过三分钟的片段。哪个动作，或哪一段沉默，让你心里有了反应？"},
   {symbol:"♪",type:"音乐",prompt:"听一段音乐，不解释。只留意身体哪里最先有变化。"},
   {symbol:"◇",type:"故事",prompt:"读一个很短的故事。你更靠近哪个人物？又更想远离哪个人物？"}
 ];
@@ -289,7 +289,7 @@ function runDyad(){
         dyadRunning = false;
         document.getElementById("dyadClock").textContent = "完成";
         document.getElementById("dyadStageLabel").textContent = "圆满结束";
-        document.getElementById("dyadInstruction").textContent = "不急着总结。让这次聆听在之后继续工作。";
+        document.getElementById("dyadInstruction").textContent = "不急着总结。让刚才听见的东西，在之后的日子里慢慢沉淀。";
         document.getElementById("dyadStart").textContent = "重新开始";
         return;
       }
