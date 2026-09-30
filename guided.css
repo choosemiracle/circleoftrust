@@ -13,7 +13,7 @@ body.guided-page{margin:0;background:#f9f7f2;color:#24312b}
 .guided-shell{min-height:100vh}
 .guided-intro{padding:78px 0 100px;background:linear-gradient(135deg,#dfe4db,#b6c2b5)}
 .guided-intro-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:55px;align-items:start}
-.guided-intro h1{font-family:"Songti SC","STSong",serif;font-size:clamp(40px,5.2vw,62px);line-height:1.18;letter-spacing:-.03em;margin:18px 0 24px;max-width:15ch;text-wrap:balance}
+.guided-intro h1{font-family:"Songti SC","STSong",serif;font-size:clamp(40px,5vw,60px);line-height:1.2;letter-spacing:-.03em;margin:18px 0 24px;max-width:18ch;text-wrap:pretty}
 .guided-intro p{max-width:760px;font-size:18px;color:#34433b;text-wrap:pretty}
 .mode-card{background:rgba(255,255,255,.65);padding:26px}
 .mode-card>span{font-size:12px;letter-spacing:.12em;font-weight:700}

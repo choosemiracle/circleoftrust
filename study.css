@@ -7,7 +7,7 @@
 .study-hero:after{content:"";position:absolute;width:640px;height:640px;border-radius:50%;border:1px solid rgba(255,255,255,.28);right:-180px;bottom:-290px;box-shadow:0 0 0 85px rgba(255,255,255,.05),0 0 0 170px rgba(255,255,255,.035)}
 .study-hero .nav,.study-hero-copy{position:relative;z-index:2}
 .study-hero-copy{padding:8vh 0 9vh}
-.study-hero h1{font-family:"Songti SC","STSong",serif;font-size:clamp(42px,5.5vw,66px);line-height:1.16;letter-spacing:-.03em;margin:18px 0 24px;max-width:15ch;font-weight:600;text-wrap:balance}
+.study-hero h1{font-family:"Songti SC","STSong",serif;font-size:clamp(42px,5.2vw,64px);line-height:1.17;letter-spacing:-.03em;margin:18px 0 24px;max-width:20ch;font-weight:600;text-wrap:pretty}
 .study-hero-copy>p{max-width:780px;font-size:18px;color:#314039;text-wrap:pretty}
 .study-hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
 .study-progress-card{margin-top:45px;background:rgba(255,253,248,.72);backdrop-filter:blur(10px);max-width:620px;padding:20px 22px}

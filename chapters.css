@@ -1,7 +1,7 @@
 :root{--chapter-night:#253a31;--chapter-sage:#9fb09f;--chapter-cream:#f4efe5;--chapter-warm:#b9885e}
 .chapter-hero{background:linear-gradient(135deg,#d9ddd3,#aab8aa 60%,#84998b);padding-bottom:64px}
 .chapter-hero-copy{padding:70px 0 38px}
-.chapter-hero h1{font-family:"Songti SC","STSong",serif;font-size:clamp(42px,5.5vw,66px);line-height:1.16;letter-spacing:-.03em;margin:18px 0 22px;max-width:16ch;text-wrap:balance}
+.chapter-hero h1{font-family:"Songti SC","STSong",serif;font-size:clamp(42px,5.2vw,64px);line-height:1.17;letter-spacing:-.03em;margin:18px 0 22px;max-width:20ch;text-wrap:pretty}
 .chapter-hero-copy>p{max-width:780px;font-size:18px;color:#334139;text-wrap:pretty}
 .hero-note{margin-top:28px;display:inline-block;padding:12px 16px;background:rgba(255,255,255,.65);font-size:13px;color:#435148}
 .chapter-toc{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
