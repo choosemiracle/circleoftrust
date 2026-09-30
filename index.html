@@ -13,6 +13,7 @@
       <div class="brand">信任圈入门</div>
       <div class="nav-links">
         <a href="#what">什么是信任圈</a>
+        <a href="#circle-lab">互动圆圈</a>
         <a href="#path">学习路径</a>
         <a href="#modules">学习模块</a>
         <a href="#practice">马上练习</a>
@@ -82,8 +83,43 @@
       </div>
     </section>
 
+    <section id="circle-lab" class="section circle-lab">
+      <div class="wrap">
+        <div class="section-kicker light">03 · 进入圆圈</div>
+        <h2>点击一块“触石”，看看它如何改变关系。</h2>
+        <div class="circle-experience">
+          <div class="trust-orbit" id="trustOrbit" aria-label="11 条 Touchstones 互动圆环">
+            <svg viewBox="0 0 620 620" role="img" aria-labelledby="orbitTitle orbitDesc">
+              <title id="orbitTitle">11 条 Touchstones 信任圈</title>
+              <desc id="orbitDesc">围绕共同中心排列的十一条信任圈实践原则，点击编号查看解释与练习。</desc>
+              <circle class="orbit-ring ring-outer" cx="310" cy="310" r="244"></circle>
+              <circle class="orbit-ring ring-inner" cx="310" cy="310" r="154"></circle>
+              <circle class="orbit-center" cx="310" cy="310" r="92"></circle>
+              <text x="310" y="296" text-anchor="middle" class="orbit-center-title">共同中心</text>
+              <text x="310" y="326" text-anchor="middle" class="orbit-center-sub">Inner Teacher</text>
+              <g id="orbitNodes"></g>
+            </svg>
+          </div>
+          <div class="orbit-detail" aria-live="polite">
+            <div class="orbit-detail-number" id="orbitNumber">01 / 11</div>
+            <h3 id="orbitTitleText">给予欢迎，也接受欢迎</h3>
+            <p id="orbitBody">让彼此知道：你可以带着真实的自己来到这里，不需要先变得“更好”才值得被接纳。</p>
+            <div class="orbit-practice">
+              <span>今天可以这样练</span>
+              <p id="orbitPractice">今天，我怎样让一个人感觉自己被真正欢迎？</p>
+            </div>
+            <div class="orbit-actions">
+              <button class="btn orbit-prev" type="button" id="orbitPrev">上一条</button>
+              <button class="btn primary" type="button" id="orbitRandom">随机一条</button>
+              <button class="btn orbit-next" type="button" id="orbitNext">下一条</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="path" class="section wrap">
-      <div class="section-kicker">03 · 学习路径</div>
+      <div class="section-kicker">04 · 学习路径</div>
       <h2>第一次接触，可以这样走</h2>
       <div class="timeline">
         <button class="step active" data-step="0">
@@ -124,7 +160,7 @@
 
     <section id="modules" class="section soft">
       <div class="wrap">
-        <div class="section-kicker">04 · 深入学习</div>
+        <div class="section-kicker">05 · 深入学习</div>
         <h2>五个核心模块，慢慢进入信任圈</h2>
         <div class="module-grid">
           <a class="module-card" href="touchstones.html"><span>01</span><small>TRUSTWORTHY SPACE</small><h3>11 条 Touchstones</h3><p>学习怎样共同创造一个可信赖的空间。</p><b>进入模块 →</b></a>
@@ -136,10 +172,57 @@
       </div>
     </section>
 
+    <section class="section interaction-lab">
+      <div class="wrap">
+        <div class="section-kicker">06 · 练习台</div>
+        <h2>不是记住概念，而是在一次次选择里改变习惯。</h2>
+        <div class="lab-grid">
+          <article class="lab-card question-lab">
+            <div class="lab-meta">HONEST & OPEN QUESTIONS</div>
+            <h3>这真的是开放问题吗？</h3>
+            <p class="lab-intro">先辨认“建议伪装成问题”的时刻。</p>
+            <div class="quiz-source" id="quizSource">“你为什么不直接拒绝他？”</div>
+            <div class="quiz-options" id="quizOptions"></div>
+            <div class="quiz-feedback" id="quizFeedback" aria-live="polite">选一个你觉得更开放的问法。</div>
+            <button class="btn lab-secondary" type="button" id="nextQuiz">换一道</button>
+          </article>
+
+          <article class="lab-card thirdthing-lab">
+            <div class="lab-meta">THIRD THINGS</div>
+            <h3>抽一张“第三物”</h3>
+            <p class="lab-intro">让一个外在对象成为共同中心，而不是直接逼近彼此。</p>
+            <div class="thirdthing-stage" id="thirdThingStage">
+              <span class="thirdthing-symbol" id="thirdThingSymbol">✦</span>
+              <strong id="thirdThingType">诗歌</strong>
+              <p id="thirdThingPrompt">找一句让你停顿的诗。不要解释作者，只说：它在我身上唤起了什么？</p>
+            </div>
+            <button class="btn primary" type="button" id="drawThirdThing">重新抽取</button>
+          </article>
+
+          <article class="lab-card dyad-lab">
+            <div class="lab-meta">DYAD TIMER</div>
+            <h3>二人聆听 · 引导计时</h3>
+            <p class="lab-intro">让结构替带领者守住节奏。</p>
+            <div class="dyad-progress" id="dyadProgress" aria-hidden="true">
+              <span class="active"></span><span></span><span></span><span></span>
+            </div>
+            <div class="dyad-stage-label" id="dyadStageLabel">准备</div>
+            <div class="dyad-clock" id="dyadClock">04:00</div>
+            <p class="dyad-instruction" id="dyadInstruction">A 分享，B 只听。不追问、不建议、不讲自己的故事。</p>
+            <div class="dyad-controls">
+              <button class="btn primary" type="button" id="dyadStart">开始</button>
+              <button class="btn lab-secondary" type="button" id="dyadPause">暂停</button>
+              <button class="btn lab-secondary" type="button" id="dyadReset">重置</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section id="practice" class="section practice">
       <div class="wrap practice-grid">
         <div>
-          <div class="section-kicker light">05 · 马上练习</div>
+          <div class="section-kicker light">07 · 马上练习</div>
           <h2>一个人，也可以开始信任圈练习</h2>
           <p>
             找一个不被打扰的地方。把手机扣下。给自己三分钟，不解决任何问题，
@@ -156,7 +239,7 @@
     </section>
 
     <section class="section wrap">
-      <div class="section-kicker">06 · 在两个人之间练习</div>
+      <div class="section-kicker">08 · 在两个人之间练习</div>
       <h2>最简单的二人聆听练习</h2>
       <div class="dyad">
         <div class="dyad-side">
@@ -182,7 +265,7 @@
 
     <section class="section soft">
       <div class="wrap">
-        <div class="section-kicker">07 · 五条入门约定</div>
+        <div class="section-kicker">09 · 五条入门约定</div>
         <h2>一个安全的信任圈，需要什么？</h2>
         <div class="agreements">
           <div><span>01</span><p><strong>不修理彼此。</strong>不给未经邀请的建议。</p></div>
@@ -195,7 +278,7 @@
     </section>
 
     <section class="section wrap">
-      <div class="section-kicker">08 · 继续深入</div>
+      <div class="section-kicker">10 · 继续深入</div>
       <h2>从这里，进入帕克·帕尔默</h2>
       <div class="resource-grid">
         <article class="resource">
