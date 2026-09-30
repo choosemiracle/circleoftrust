@@ -35,7 +35,7 @@
       const link = document.createElement("a");
       link.className = "guided-link";
       link.href = "guided.html?chapter=" + card.dataset.session;
-      link.textContent = "进入本章引导练习 →";
+      link.textContent = "开始本章引导练习 →";
       card.querySelector(".session-content").appendChild(link);
     }
     const button = card.querySelector(".session-check");
@@ -63,9 +63,9 @@
   const readinessResult = document.getElementById("readinessResult");
   function renderReadiness() {
     const count = readinessBoxes.filter(x => x.checked).length;
-    let message = "先从自己最容易失守的一项开始练。";
+    let message = "先从自己最不熟练的一项开始练。";
     if (count >= 3) message = "已经有了一些基础；下一步可以把这些能力放进真实的二人或三人练习。";
-    if (count >= 5) message = "接近可以尝试带领小型入门圈，但仍建议从低风险主题开始。";
+    if (count >= 5) message = "已经接近可以尝试带领小型入门圈，但仍建议先从不太私密、压力较小的话题开始。";
     if (count === 6) message = "六项都已经有基础。可以尝试完整流程，同时继续保持谦逊、边界感，并在每次结束后回看和反思。";
     readinessResult.textContent = "当前：" + count + " / 6。" + message;
   }

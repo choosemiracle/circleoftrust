@@ -2,7 +2,7 @@ const lessons = [
   {
     label:"第一步",
     title:"先认识一个核心原则：不修复，不拯救，不建议，也不纠正他人",
-    body:"当一个人分享困惑时，我们很容易马上给建议。信任圈练习的是另一种回应：不急于替别人解决问题，而是陪伴他们更深地听见自己。",
+    body:"当一个人分享困惑时，我们很容易马上给建议。信任圈练习的是另一种回应：不急于替别人解决问题，而是先陪他把自己的感受和想法听清楚。",
     prompt:"最近一次有人向你倾诉时，你最先做的是倾听，还是给建议？"
   },
   {
@@ -14,7 +14,7 @@ const lessons = [
   {
     label:"第三步",
     title:"练习提出开放而诚实的问题",
-    body:"好的问题不是为了把对方带到你想要的答案，而是帮助他更深入地听见自己。少问“为什么不”，多问“当你想到这件事时，内在发生了什么？”",
+    body:"好的问题不是为了把对方带到你想要的答案，而是帮助他自己想得更清楚。少问“为什么不”，多问“当你想到这件事时，你最先有什么感受或念头？”",
     prompt:"把“你为什么不辞职？”改写成一个没有预设答案的开放问题。"
   },
   {
@@ -26,7 +26,7 @@ const lessons = [
   {
     label:"第五步",
     title:"让练习慢慢变成日常相处的方式",
-    body:"信任圈真正的变化，不只发生在一次练习里，而是当你开始把少一点评判、多一点静默和对他人内在判断力的信任，带进日常关系。",
+    body:"信任圈真正的变化，不只发生在一次练习里，而是当你开始少一点判断、多一点安静，也更相信对方有能力慢慢想清楚自己的事。",
     prompt:"你的生活里，有哪一段关系最值得先尝试这种新的聆听方式？"
   }
 ];
@@ -156,7 +156,7 @@ if(orbitNodes){
 const quizItems = [
   {
     source:"“你为什么不直接拒绝他？”",
-    options:["你是不是其实害怕冲突？","当你想到“拒绝”这件事时，内在最先出现什么？","你有没有试过先冷静几天？"],
+    options:["你是不是其实害怕冲突？","当你想到“拒绝”这件事时，你最先有什么感受或念头？","你有没有试过先冷静几天？"],
     correct:1,
     note:"这个问法没有替对方解释原因，而是把注意力带回他的真实经验。"
   },
@@ -168,9 +168,9 @@ const quizItems = [
   },
   {
     source:"“你有没有想过为自己活一次？”",
-    options:["你是不是一直太在意别人？","如果暂时不用回应任何人的期待，你会听见什么？","你最想摆脱谁的影响？"],
+    options:["你是不是一直太在意别人？","如果暂时不用回应任何人的期待，你心里最先会冒出什么？","你最想摆脱谁的影响？"],
     correct:1,
-    note:"它没有替对方规定“为自己活”应该是什么，而是把空间留给对方自己去感受和分辨。"
+    note:"它没有替对方规定“为自己活”应该是什么，而是让对方自己去感受和分辨。"
   }
 ];
 let quizIndex = 0;
@@ -214,12 +214,12 @@ if(document.getElementById("nextQuiz")){
 
 // Third Thing draw
 const thirdThings = [
-  {symbol:"✦",type:"诗歌",prompt:"找一句让你停顿的诗。不要解释作者，只说：它在我身上唤起了什么？"},
+  {symbol:"✦",type:"诗歌",prompt:"找一句让你停下来的诗。不要解释作者，只说：它让我想起了什么、感受到了什么？"},
   {symbol:"◫",type:"图像",prompt:"看一幅画或一张照片一分钟。哪一个细节最先让你停了下来？"},
-  {symbol:"⌁",type:"自然物",prompt:"选一片叶子、石头或一杯水。它此刻像你生命中的什么？"},
+  {symbol:"⌁",type:"自然物",prompt:"选一片叶子、一块石头或一杯水。看着它时，你会想到自己最近生活里的什么？"},
   {symbol:"▶",type:"电影片段",prompt:"看一个不超过三分钟的片段。哪个动作，或哪一段沉默，让你心里有了反应？"},
   {symbol:"♪",type:"音乐",prompt:"听一段音乐，不解释。只留意身体哪里最先有变化。"},
-  {symbol:"◇",type:"故事",prompt:"读一个很短的故事。你更靠近哪个人物？又更想远离哪个人物？"}
+  {symbol:"◇",type:"故事",prompt:"读一个很短的故事。你最能理解哪个人物？又对哪个人物最有距离感？"}
 ];
 let lastThirdThing = 0;
 const thirdThingStage = document.getElementById("thirdThingStage");
@@ -242,9 +242,9 @@ if(document.getElementById("drawThirdThing") && thirdThingStage){
 // Guided dyad timer
 const dyadStages = [
   {label:"A 分享 · B 聆听",seconds:240,instruction:"A 分享，B 只听。不追问、不建议、不讲自己的故事。"},
-  {label:"共同静默",seconds:30,instruction:"谁都不需要填补这 30 秒。只让刚才听见的东西沉淀。"},
-  {label:"B 分享 · A 聆听",seconds:240,instruction:"交换角色。B 分享，A 只听。继续相信对方有自己的内在导师。"},
-  {label:"结束",seconds:60,instruction:"每个人只说一句：此刻，我想带走什么？然后以安静结束。"}
+  {label:"共同静默",seconds:30,instruction:"谁都不需要填补这 30 秒。就安静地待一会儿，消化刚才的话。"},
+  {label:"B 分享 · A 聆听",seconds:240,instruction:"交换角色。B 分享，A 只听。不帮对方总结，也不替对方下结论。"},
+  {label:"结束",seconds:60,instruction:"每个人只说一句：此刻，我想带走什么？然后一起安静片刻。"}
 ];
 let dyadStageIndex = 0;
 let dyadRemaining = dyadStages[0].seconds;
@@ -288,8 +288,8 @@ function runDyad(){
         dyadInterval = null;
         dyadRunning = false;
         document.getElementById("dyadClock").textContent = "完成";
-        document.getElementById("dyadStageLabel").textContent = "圆满结束";
-        document.getElementById("dyadInstruction").textContent = "不急着总结。让刚才听见的东西，在之后的日子里慢慢沉淀。";
+        document.getElementById("dyadStageLabel").textContent = "练习结束";
+        document.getElementById("dyadInstruction").textContent = "不急着总结。让刚才的话先在心里放一放。";
         document.getElementById("dyadStart").textContent = "重新开始";
         return;
       }
