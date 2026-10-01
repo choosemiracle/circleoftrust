@@ -64,15 +64,16 @@ body{
 }
 .ripple{
   fill:none;
-  stroke:rgba(244,228,157,.52);
-  stroke-width:1.2;
+  stroke:rgba(248,232,164,.86);
+  stroke-width:2.1;
   transform-box:fill-box;
   transform-origin:center;
-  opacity:0;
+  opacity:.24;
+  filter:drop-shadow(0 0 3px rgba(248,232,164,.34));
 }
-.ripple-1{animation:gentleRipple 9.6s ease-out infinite}
-.ripple-2{animation:gentleRipple 9.6s ease-out 1.8s infinite}
-.ripple-3{animation:gentleRipple 9.6s ease-out 3.6s infinite}
+.ripple-1{animation:gentleRipple 10.8s ease-out infinite}
+.ripple-2{animation:gentleRipple 10.8s ease-out 2.1s infinite}
+.ripple-3{animation:gentleRipple 10.8s ease-out 4.2s infinite}
 .inner-seed{
   fill:rgba(246,237,190,.72);
   stroke:rgba(255,253,248,.55);
@@ -97,19 +98,19 @@ body{
   50%{transform:scale(1.018);opacity:1}
 }
 @keyframes innerBreath{
-  0%,100%{transform:scale(.94);opacity:.36}
-  50%{transform:scale(1.08);opacity:.62}
+  0%,100%{transform:scale(.94);opacity:.28}
+  50%{transform:scale(1.06);opacity:.48}
 }
 @keyframes seedPulse{
   0%,100%{transform:scale(.9);opacity:.72}
   50%{transform:scale(1.18);opacity:1}
 }
 @keyframes gentleRipple{
-  0%{transform:scale(.78);opacity:0}
-  14%{opacity:.22}
-  42%{opacity:.44}
-  72%{opacity:.16}
-  100%{transform:scale(1.48);opacity:0}
+  0%{transform:scale(.88);opacity:.18}
+  18%{opacity:.46}
+  44%{opacity:.82}
+  72%{opacity:.42}
+  100%{transform:scale(1.28);opacity:.14}
 }
 @keyframes nodeDriftA{
   0%,100%{transform:translate(0,0);opacity:.48}
