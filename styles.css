@@ -64,15 +64,15 @@ body{
 }
 .ripple{
   fill:none;
-  stroke:rgba(244,228,157,.34);
-  stroke-width:1.15;
+  stroke:rgba(244,228,157,.52);
+  stroke-width:1.2;
   transform-box:fill-box;
   transform-origin:center;
   opacity:0;
 }
-.ripple-1{animation:gentleRipple 8s ease-out infinite}
-.ripple-2{animation:gentleRipple 8s ease-out 2.2s infinite}
-.ripple-3{animation:gentleRipple 8s ease-out 4.4s infinite}
+.ripple-1{animation:gentleRipple 9.6s ease-out infinite}
+.ripple-2{animation:gentleRipple 9.6s ease-out 1.8s infinite}
+.ripple-3{animation:gentleRipple 9.6s ease-out 3.6s infinite}
 .inner-seed{
   fill:rgba(246,237,190,.72);
   stroke:rgba(255,253,248,.55);
@@ -105,11 +105,11 @@ body{
   50%{transform:scale(1.18);opacity:1}
 }
 @keyframes gentleRipple{
-  0%{transform:scale(.82);opacity:0}
-  18%{opacity:.18}
-  46%{opacity:.28}
-  78%{opacity:.08}
-  100%{transform:scale(1.34);opacity:0}
+  0%{transform:scale(.78);opacity:0}
+  14%{opacity:.22}
+  42%{opacity:.44}
+  72%{opacity:.16}
+  100%{transform:scale(1.48);opacity:0}
 }
 @keyframes nodeDriftA{
   0%,100%{transform:translate(0,0);opacity:.48}
