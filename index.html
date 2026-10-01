@@ -35,6 +35,51 @@
       </div>
       <div class="hero-note">建议第一次访问时，留出 15 分钟，不急着看完。</div>
     </div>
+
+    <div class="hero-listening" aria-hidden="true">
+      <svg class="listening-field" viewBox="0 0 760 760" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="innerTeacherGlow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#f5f1e8" stop-opacity=".7"/>
+            <stop offset="42%" stop-color="#dce4da" stop-opacity=".28"/>
+            <stop offset="100%" stop-color="#dce4da" stop-opacity="0"/>
+          </radialGradient>
+          <linearGradient id="listeningWave" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#fffdf8" stop-opacity="0"/>
+            <stop offset="48%" stop-color="#fffdf8" stop-opacity=".46"/>
+            <stop offset="100%" stop-color="#fffdf8" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+
+        <g class="listening-rings">
+          <circle class="listening-ring ring-a" cx="390" cy="392" r="286"/>
+          <circle class="listening-ring ring-b" cx="390" cy="392" r="216"/>
+          <circle class="listening-ring ring-c" cx="390" cy="392" r="148"/>
+        </g>
+
+        <g class="community-nodes">
+          <circle class="community-node node-a" cx="201" cy="178" r="6"/>
+          <circle class="community-node node-b" cx="501" cy="126" r="5"/>
+          <circle class="community-node node-c" cx="633" cy="286" r="6"/>
+          <circle class="community-node node-d" cx="647" cy="502" r="5"/>
+          <circle class="community-node node-e" cx="485" cy="640" r="6"/>
+          <circle class="community-node node-f" cx="243" cy="616" r="5"/>
+          <circle class="community-node node-g" cx="128" cy="410" r="5"/>
+        </g>
+
+        <g class="inner-listener">
+          <circle class="inner-halo" cx="390" cy="392" r="92" fill="url(#innerTeacherGlow)"/>
+          <circle class="inner-orbit" cx="390" cy="392" r="31"/>
+          <circle class="inner-core" cx="390" cy="392" r="8"/>
+        </g>
+
+        <g class="listening-waves">
+          <path class="listening-wave wave-a" d="M150 330 C225 250 310 238 390 292 C455 336 521 340 614 279"/>
+          <path class="listening-wave wave-b" d="M164 468 C246 523 320 527 390 482 C466 433 538 438 621 494"/>
+          <path class="listening-wave wave-c" d="M275 134 C327 203 354 268 366 335"/>
+        </g>
+      </svg>
+    </div>
   </header>
 
   <main>
