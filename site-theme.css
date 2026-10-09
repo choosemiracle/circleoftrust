@@ -61,6 +61,9 @@ button,a,input,textarea,select,summary{touch-action:manipulation}
 .btn.ghost:hover,.btn.secondary:hover,.btn.lab-secondary:hover{background:#e4e9df}
 .hero-listening{right:max(calc((100vw - 1080px)/2),0px);top:90px;width:min(43vw,540px);opacity:.5;z-index:0;overflow:hidden}
 .hero-listening *{animation:none!important;filter:none}
+.hero .eyebrow,.hero h1,.hero .lead,.hero-actions{animation:none;opacity:1;transform:none}
+button:disabled{opacity:.48;cursor:default}
+.practice-box p{color:var(--muted)}
 .listening-ring{stroke:#8c9b85;stroke-width:.9}
 .community-node{fill:#83937a;stroke:var(--paper);opacity:.6}
 .inner-aura,.ripple,.listening-wave{display:none}
@@ -182,9 +185,9 @@ button,a,input,textarea,select,summary{touch-action:manipulation}
 .history-media-title{font-size:18px}
 .history-translation-row{grid-template-columns:minmax(0,1fr) minmax(0,1.15fr) minmax(0,1.25fr)}
 .history-translation-row>div{font-size:15px;line-height:1.9}
-.evolution-flow{display:flex;flex-wrap:wrap;gap:10px;overflow:visible}
-.evolution-flow article{flex:1 1 150px;min-width:0}
-.evolution-flow i{align-self:center}
+.evolution-flow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;overflow:visible}
+.evolution-flow>div{min-width:0}
+.evolution-flow>i{display:none}
 .comparison-definition{background:#e3eadb}
 .definition-flow{flex-wrap:wrap}
 .comparison-pair h3{font-size:26px;font-weight:500}
@@ -366,7 +369,7 @@ button,a,input,textarea,select,summary{touch-action:manipulation}
   .section-kicker,.eyebrow{font-size:11px;letter-spacing:.06em}
   .en-note{font-size:10px}
   .intro-copy{font-size:17px}
-  .intro-grid,.history-intro-grid,.comparison-intro-grid,.cards.three,.resource-grid,.lab-grid,.module-family-grid,.circle-experience,.practice-grid,.dyad,.term-grid,.term-grid.compact,.facilitator-grid,.movement-grid,.four-step,.transfer-grid,.chapter-grid,.practice-triad,.deep-points,.five-conditions,.three-journal,.two-column-journal,.gift-grid,.integrity-scan,.container-checks,.finish-grid,.history-three-lines,.history-media-grid,.comparison-pairs,.selector-steps,.pair-grid,.use-grid,.switch-grid,.distinctive-grid,.map-reading,.comparison-source-grid,.history-source-grid,.ladder,.run-sheet,.session-plan,.session-plan.large,.guided-intro-grid,.chapter-picker{grid-template-columns:minmax(0,1fr);gap:18px}
+  .intro-grid,.history-intro-grid,.comparison-intro-grid,.cards.three,.resource-grid,.lab-grid,.module-family-grid,.circle-experience,.practice-grid,.dyad,.term-grid,.term-grid.compact,.facilitator-grid,.movement-grid,.four-step,.transfer-grid,.chapter-grid,.practice-triad,.deep-points,.five-conditions,.three-journal,.two-column-journal,.gift-grid,.integrity-scan,.container-checks,.finish-grid,.history-three-lines,.evolution-flow,.history-media-grid,.comparison-pairs,.selector-steps,.pair-grid,.use-grid,.switch-grid,.distinctive-grid,.map-reading,.comparison-source-grid,.history-source-grid,.ladder,.run-sheet,.session-plan,.session-plan.large,.guided-intro-grid,.chapter-picker{grid-template-columns:minmax(0,1fr);gap:18px}
   .card,.resource,.touchstone,.term-card,.movement-card,.chapter-card,.lab-card,.module-card{padding:24px}
   .module-family-heading{gap:4px}
   .module-family{margin-top:28px}

@@ -302,6 +302,7 @@
   });
 
   const params=new URLSearchParams(location.search);
-  const requested=Number(params.get("chapter"));
-  if(Number.isInteger(requested) && requested>=0 && requested<=10) startChapter(requested);
+  const requestedChapter=params.get("chapter");
+  const requested=Number(requestedChapter);
+  if(requestedChapter!==null && Number.isInteger(requested) && requested>=0 && requested<=10) startChapter(requested);
 })();
